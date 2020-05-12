@@ -33,7 +33,7 @@ h6 {
 }
 
 #body {
-    margin-left: 290px;
+    margin-left: 255px;
 }
 
 body {
@@ -68,6 +68,7 @@ body {
     background-color: white;
     width: 255px;
     border-right: 1px solid #d6d9db;
+    min-width: 252px;
 
     .padding {
         max-width: 1000px;
@@ -92,9 +93,6 @@ body {
         }       
 }
 
-#sidebar-toggle {
-    display: none;
-}
 
 #sidebar ul.topics {
     margin: 0 1.8em;
@@ -140,6 +138,11 @@ a {
     margin: 0 auto;
 }
 
+#overlay {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
 #body-inner {
     min-width: 738px;
 }
@@ -154,31 +157,100 @@ pre {
     background: #F0F0F0;
 }
 
-.searchbox {
-
-    border: 1px solid #c1c1c1;
-
-    span {
-        color: #6973864a;
-        &:hover {
-           color: #69738694
-        }
-    }
-
-    label {
-        color: #69738694;
-    }
-
-    input {
-        color: #555;
-        background: #f7fafc;
-
-        @include placeholder {
-            color: #6973864a;
-        }
-    }
-}
-
 .highlightable {
     padding: 16px 0 16px;
+}
+
+#main-header {
+    border-bottom: 1px solid #d6d9db;
+
+    .topnav {
+        overflow: hidden;
+        background-color: white;
+        
+        a.button {
+          float: right;
+          color: white;
+          text-align: right;
+          padding: 14px 16px;
+          font-size: 17px;
+        }
+      
+        a.spiff-cor{
+          background-color: white;
+          color: #34343c;
+          float: right;
+          text-align: right;
+          padding: 14px 16px;
+          font-size: 17px;
+        }
+      }
+
+      .topnav a:hover{
+            color: rgb(218, 27, 92);
+      }
+
+      .tntsearch-form {
+        float: left;
+        margin-top: 8px;
+        font-size: 17px;
+        border: none;
+
+        position: absolute;
+        top: 0;
+        width: 600px;
+        z-index: 10020;
+
+        textarea, input[type=email], input[type=number], input[type=password], input[type=search], input[type=tel], input[type=text], input[type=url], input[type=color], input[type=date], input[type=datetime], input[type=datetime-local], input[type=month], input[type=time], input[type=week], select[multiple=multiple] {
+            background-color: transparent;
+            border: none;
+            box-shadow: none;
+        }
+
+      input {
+          color: #3C4265;
+          background: white;
+  
+          @include placeholder {
+            color: #697386;
+        }
+      }
+    }
+  }
+
+  .button-wrapper {
+    display: block;
+    text-align: center;
+  }
+  
+  .button {
+    border: none;
+    border-radius: 3em;
+    display: inline-block;
+    font-size: 16px;
+    padding: 1em 2em;
+    width: auto;
+    box-shadow: none
+  }
+  
+  .cta-button {
+    background-color: rgb(218, 27, 92);
+    color: #fff !important;
+  }
+  
+  .cta-button:hover {
+    background-color: rgb(218, 27, 92);
+    box-shadow: none;
+}
+
+.tntsearch-results {
+    position: initial;
+    top: -10px;
+    padding: 10px;
+    width: calc(994px - 226px);
+    min-height: 58px;
+    background: rgb(255, 255, 255);
+    box-shadow: 0 15px 35px 0 rgba(50,50,93,.1), 0 5px 15px 0 rgba(0,0,0,.07);
+    z-index: 10010;
+    border-radius: 0 0 4px 4px;
 }
