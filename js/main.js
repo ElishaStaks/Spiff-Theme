@@ -1,21 +1,29 @@
 
+// runs this function once all DOM has been loaded
 window.onload = function(){
-    const form = document.querySelector('#tntsearch-wrapper > input[type=text]');
 
-    form.addEventListener('input', (e) => {
-        const clear = document.querySelector('.tntsearch-clear');
+    // variable declaration for query selectors
+    const input = document.querySelector("#tntsearch-wrapper > input[type=text]");
+    const clearSearch = document.querySelector(".tntsearch-clear");
 
-        e.target = document.querySelector('.tntsearch-results').style.visibility = "visible";
+    // listen event which checks if the user has typed anything into the search bar
+    input.addEventListener("input", function() {
+        // Show result form
+        document.querySelector(".tntsearch-results").style.visibility = "visible";
 
-        if (form.value == 0){
-            e.target = document.querySelector('#overlay').style.visibility = "hidden";
+        // checks if there are 0 inputs in the search bar
+        if (form.value === 0){
+            // hide overlay
+            document.querySelector("#overlay").style.visibility = "hidden";
         }
         else {
-            e.target = document.querySelector('#overlay').style.visibility = "visible";
+            // show overlay
+            document.querySelector("#overlay").style.visibility = "visible";
         }
 
-        clear.addEventListener('click', (e) =>  {
-            e.target = document.querySelector('#overlay').style.visibility = "hidden";
+        // listen event which checks if user has clicked on the clear input button
+        clearSearch.addEventListener("click", function()  {
+            document.querySelector("#overlay").style.visibility = "hidden";
         });
     });
-}
+};

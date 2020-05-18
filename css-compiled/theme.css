@@ -975,6 +975,28 @@ td {
   outline: none;
 }
 
+ul {
+  list-style: none;
+}
+
+a {
+  color: #1694CA;
+}
+a:hover {
+  transition: all 0.3s ease 0s;
+  color: #da1b5c;
+}
+
+p {
+  font-size: 16px;
+  margin-top: 8px;
+  margin-bottom: 24px;
+}
+
+pre {
+  background: #F0F0F0;
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-family: Roboto;
   color: #1f1a47;
@@ -1007,8 +1029,38 @@ h6 {
   font-size: 10.72px;
 }
 
+#overlay {
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  /* Full width (cover the whole page) */
+  height: 100%;
+  /* Full height (cover the whole page) */
+  background: rgba(255, 255, 255, 0.8);
+  z-index: 10000;
+}
+
+#body-inner {
+  min-width: 738px;
+}
+
+.highlightable {
+  padding: 16px 0 16px;
+}
+
 #body {
   margin-left: 255px;
+}
+#body .padding {
+  padding-top: 15px;
+  padding-left: 55px;
+  padding-bottom: 33px;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 body {
@@ -1067,14 +1119,6 @@ body a a:hover {
   margin: 0 1.8em;
 }
 
-a {
-  color: #1694CA;
-}
-a:hover {
-  transition: all 0.3s ease 0s;
-  color: #da1b5c;
-}
-
 #sidebar ul li.visited > a .read-icon {
   display: none;
 }
@@ -1098,32 +1142,6 @@ a:hover {
   font-weight: 500;
   font-size: 16px;
   color: #1f1a47;
-}
-
-#body .padding {
-  padding-top: 15px;
-  padding-left: 55px;
-  padding-bottom: 33px;
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-#body-inner {
-  min-width: 738px;
-}
-
-p {
-  font-size: 16px;
-  margin-top: 8px;
-  margin-bottom: 24px;
-}
-
-pre {
-  background: #F0F0F0;
-}
-
-.highlightable {
-  padding: 16px 0 16px;
 }
 
 #main-header {
@@ -1218,33 +1236,21 @@ pre {
 #main-header .tntsearch-results p {
   font-size: 13px;
 }
-#main-header .tntsearch-results a {
-  color: #555;
-}
 #main-header .tntsearch-results li {
   display: block;
   margin-bottom: 10px;
+}
+#main-header .tntsearch-results li p {
+  color: #555;
+}
+#main-header .tntsearch-results li .title h5 {
+  color: #da1b5c;
 }
 #main-header .tntsearch-results li:hover {
   background: #f5fbff;
 }
 #main-header .tntsearch-results .results {
   list-style: none;
-}
-
-#overlay {
-  visibility: hidden;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  width: 100%;
-  /* Full width (cover the whole page) */
-  height: 100%;
-  /* Full height (cover the whole page) */
-  background: rgba(255, 255, 255, 0.8);
-  z-index: 10000;
 }
 
 /*# sourceMappingURL=theme.css.map */
