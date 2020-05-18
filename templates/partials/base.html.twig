@@ -56,6 +56,7 @@
     {% block javascripts %}
         {% do assets.addJs('jquery',101) %}
         {% do assets.addJs('theme://js/modernizr.custom.71422.js',100) %}
+        {% do assets.addJs('theme://js/main.js', 99) %}
         {% do assets.addJs('theme://js/featherlight.min.js') %}
         {% do assets.addJs('theme://js/clipboard.min.js') %}
         {% do assets.addJs('theme://js/jquery.scrollbar.min.js') %}
@@ -69,6 +70,8 @@
 
 {% endblock head %}
 </head>
+
+
 <body class="searchbox-hidden {{ page.header.body_classes }}" data-url="{{ page.route }}">
     {% block sidebar %}
     <nav id="sidebar">
@@ -85,9 +88,11 @@
     {% block body %}
     <section id="body">
         <div id="overlay"></div>
+        {% block navigation %}
         <header id="main-header">
             {% include 'partials/header-bar.html.twig' %}
         </header>
+        {% endblock %}
 
         <div class="padding highlightable">
             <a href="#" id="sidebar-toggle" data-sidebar-toggle><i class="fa fa-2x fa-bars"></i></a>
@@ -116,7 +121,6 @@
             {% endblock %}
 
         </div>
-        {% block navigation %}{% endblock %}
     </section>
     {% endblock %}
 

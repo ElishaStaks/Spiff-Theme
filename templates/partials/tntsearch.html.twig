@@ -11,6 +11,7 @@
 {% set options = { uri: url, limit: limit, snippet: snippet, min: min, in_page: in_page, live_update: live_update, search_type: search_type } %}
 
 <form role="form" class="tntsearch-form" action="{{ nojs_action }}" method="get">
+    <span class="tntsearch-by"><i class="fa fa-search"></i></span>
     {% block tntsearch_input %}
     <div id="tntsearch-wrapper" class="form-group{{ dropdown ? ' tntsearch-dropdown' : '' }}">
         <input type="text" name="q" class="form-control form-input tntsearch-field{{ in_page ? ' tntsearch-field-inpage' : '' }}" data-tntsearch="{{ options|json_encode|e('html_attr') }}" placeholder="{{ placeholder }}" value="{{ not dropdown ? query|e : '' }}" autofocus>
@@ -21,7 +22,6 @@
     {% if tntsearch_results is defined and tntsearch_results is not empty and in_page %}
         {% include 'tntquery-ajax.html.twig' %}
     {% endif %}
-    </div>
 
     {% if config.get('plugins.tntsearch.powered_by') %}
     <p class="tntsearch-powered-by">
