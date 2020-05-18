@@ -12,7 +12,7 @@ window.onload = function(){
         document.querySelector(".tntsearch-results").style.visibility = "visible";
 
         // checks if there are 0 inputs in the search bar
-        if (form.value === 0){
+        if (input.value === 0){
             // hide overlay
             document.querySelector("#overlay").style.visibility = "hidden";
         }
