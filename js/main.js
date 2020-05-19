@@ -1,13 +1,13 @@
 
 // runs this function once all DOM has been loaded
-window.onload = function(){
+window.onload = () => {
 
     // variable declaration for query selectors
     const input = document.querySelector("#tntsearch-wrapper > input[type=text]");
     const clearSearch = document.querySelector(".tntsearch-clear");
 
     // listen event which checks if the user has typed anything into the search bar
-    input.addEventListener("input", function() {
+    input.addEventListener("input", () => {
         // Show result form
         document.querySelector(".tntsearch-results").style.visibility = "visible";
 
@@ -22,7 +22,7 @@ window.onload = function(){
         }
 
         // listen event which checks if user has clicked on the clear input button
-        clearSearch.addEventListener("click", function()  {
+        clearSearch.addEventListener("click", () => {
             document.querySelector("#overlay").style.visibility = "hidden";
         });
     });

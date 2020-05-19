@@ -1094,10 +1094,6 @@ body a a:hover {
   border-right: 1px solid #d6d9db;
   min-width: 252px;
 }
-#sidebar .padding {
-  max-width: 1000px;
-  margin: 0 auto;
-}
 #sidebar .title-img {
   max-width: 120px;
 }
@@ -1146,6 +1142,8 @@ body a a:hover {
 
 #main-header {
   border-bottom: 1px solid #d6d9db;
+  max-width: 1050px;
+  margin: 0 auto;
 }
 #main-header li, #main-header a, #main-header button {
   font-size: 16px;
