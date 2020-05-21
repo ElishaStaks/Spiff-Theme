@@ -977,6 +977,7 @@ td {
 
 ul {
   list-style: none;
+  padding-left: 0px;
 }
 
 a {
@@ -1093,6 +1094,7 @@ body a a:hover {
   width: 255px;
   border-right: 1px solid #d6d9db;
   min-width: 252px;
+  position: none;
 }
 #sidebar .title-img {
   max-width: 120px;
@@ -1142,7 +1144,13 @@ body a a:hover {
 
 #main-header {
   border-bottom: 1px solid #d6d9db;
-  max-width: 1050px;
+}
+#main-header .search-bar-wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+#main-header nav {
+  max-width: 1000px;
   margin: 0 auto;
 }
 #main-header li, #main-header a, #main-header button {
@@ -1150,17 +1158,15 @@ body a a:hover {
   font-weight: 400;
   text-decoration: none;
 }
-#main-header .nav-links {
-  list-style: none;
-  padding-left: 790px;
-}
 #main-header nav ul {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+  list-style: none;
+  text-align: right;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 #main-header .nav-links li {
   display: inline-block;
-  padding: 0px 20px;
+  padding: 7px 20px;
 }
 #main-header .nav-links li a {
   transition: all 0.3s ease 0s;
@@ -1173,6 +1179,8 @@ body a a:hover {
   background-color: #da1b5c;
   cursor: pointer;
   transition: all 0.3s ease 0s;
+  padding: 10px;
+  font-size: 13px;
 }
 #main-header .cta-button {
   color: white;
@@ -1182,7 +1190,8 @@ body a a:hover {
   background-color: #aa1c4b;
 }
 #main-header #tntsearch-wrapper {
-  padding-left: 40px;
+  padding-left: 45px;
+  margin-top: 2px;
 }
 #main-header .tntsearch-form {
   float: left;
@@ -1197,6 +1206,9 @@ body a a:hover {
   background-color: transparent;
   border: none;
   box-shadow: none;
+}
+#main-header .tntsearch-form .form-input {
+  padding-left: 10px;
 }
 #main-header .tntsearch-form input {
   color: #3C4265;
@@ -1217,15 +1229,16 @@ body a a:hover {
 #main-header .tntsearch-by {
   color: #3c4257;
   position: absolute;
-  padding-top: 3px;
-  padding-left: 20px;
+  padding-top: 6px;
+  padding-left: 28px;
+}
+#main-header .tntsearch-by .fa {
+  font-size: smaller;
 }
 #main-header .tntsearch-results {
   visibility: hidden;
-  position: initial;
-  top: -10px;
-  padding: 10px;
-  width: 768;
+  position: relative;
+  top: -15px;
   min-height: 58px;
   background: white;
   box-shadow: 0 15px 35px 0 rgba(50, 50, 93, 0.1), 0 5px 15px 0 rgba(0, 0, 0, 0.07);
@@ -1236,19 +1249,157 @@ body a a:hover {
 }
 #main-header .tntsearch-results li {
   display: block;
+  padding: 10px 15px 8px 15px;
   margin-bottom: 10px;
 }
 #main-header .tntsearch-results li p {
   color: #555;
+  margin: 0;
+}
+#main-header .tntsearch-results li .title {
+  margin: 0;
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 5px;
+  margin-right: 5px;
 }
 #main-header .tntsearch-results li .title h5 {
   color: #da1b5c;
 }
 #main-header .tntsearch-results li:hover {
-  background: #f5fbff;
+  background: #edf7ff;
 }
 #main-header .tntsearch-results .results {
   list-style: none;
+}
+
+#footer-section {
+  margin: 0;
+}
+#footer-section .footer-wrapper {
+  color: #fff;
+  background-color: #96a9d7;
+  transition: transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  background-image: url(//cdn.shopify.com/s/files/1/0246/4048/7476/files/Footer2-min_1920x1920.png?v=1560925019);
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#footer-section .footer-wrapper a {
+  color: #fff;
+}
+#footer-section .main-footer {
+  max-width: 1020px;
+  padding: 50px 30px;
+  margin: 0 auto;
+  font-size: 0.875rem;
+}
+#footer-section .main-footer .footer-title {
+  margin-top: 0;
+  margin-bottom: 30px;
+  color: #fff;
+  text-align: left;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+#footer-section .main-footer .footer-link-list {
+  float: left;
+  padding-right: 30px;
+  margin-bottom: 50px;
+  width: 27.5%;
+}
+#footer-section .main-footer .footer-link-list .footer-link-list.social-icons a {
+  padding-left: 30px;
+  position: relative;
+}
+#footer-section .main-footer .footer-link-list .footer-link-list.social-icons a a:before {
+  font-family: "social-icons";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  margin-top: -7px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1;
+  font-size: 15px;
+  -webkit-font-smoothing: antialiased;
+}
+#footer-section .main-footer .footer-link-list .footer-link-list.social-icons a .facebook a:before {
+  content: "b";
+}
+#footer-section .main-footer .footer-link-list .footer-link-list.social-icons a .twitter a:before {
+  content: "a";
+}
+#footer-section .main-footer .footer-link-list .footer-link-list.social-icons a .pinterest a:before {
+  content: "d";
+}
+#footer-section .main-footer .footer-link-list .footer-link-list.social-icons a .instagram a:before {
+  content: "";
+}
+#footer-section .main-footer .footer-link-list .footer-link-list.social-icons a .youtube a:before {
+  content: "r";
+}
+#footer-section .main-footer .footer-link-list ul {
+  margin: 0;
+  padding: 0;
+  list-style: outside none;
+}
+#footer-section .main-footer .footer-link-list ul li {
+  margin: 12px 0;
+}
+#footer-section .main-footer .spread-the-word {
+  max-width: 45%;
+  padding-left: 30px;
+  float: right;
+  margin-bottom: 60px;
+}
+#footer-section .main-footer .spread-the-word p {
+  margin-bottom: 25px;
+}
+#footer-section .main-footer .spread-the-word .share-icon {
+  display: inline-block;
+  padding: 0 10px;
+  margin: 0 8px 15px 0;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 35px;
+  color: #96a9d7;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 5px;
+}
+#footer-section .main-footer .spread-the-word .share-icon .icon-tweet::before {
+  content: "";
+}
+#footer-section .main-footer .spread-the-word .share-icon .icon-like:before {
+  content: "";
+}
+#footer-section .main-footer .spread-the-word .share-icon .icon-pin:before {
+  content: "";
+}
+#footer-section .main-footer .spread-the-word .share-icon .icon-plus:before {
+  content: "";
+}
+#footer-section .main-footer .spread-the-word .share-icon .icon-fancy:before {
+  content: "";
+}
+#footer-section .main-footer .spread-the-word .share-icon .share-icon::before {
+  font-family: "Single Product Webicons Regular";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  margin-right: 8px;
+}
+#footer-section .main-footer .spread-the-word .share-icon .share-icon:last-child {
+  margin-right: 0;
+}
+#footer-section .main-footer .copyright {
+  clear: both;
+  color: rgba(255, 255, 255, 0.5);
+}
+#footer-section .main-footer .copyright p {
+  margin: 0;
 }
 
 /*# sourceMappingURL=theme.css.map */

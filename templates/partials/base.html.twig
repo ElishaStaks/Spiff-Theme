@@ -70,8 +70,6 @@
 
 {% endblock head %}
 </head>
-
-
 <body class="searchbox-hidden {{ page.header.body_classes }}" data-url="{{ page.route }}">
     {% block sidebar %}
     <nav id="sidebar">
@@ -84,7 +82,6 @@
         {% include 'partials/sidebar.html.twig' %}
     </nav>
     {% endblock %}
-
     {% block body %}
     <section id="body">
         <div id="overlay"></div>
@@ -93,43 +90,37 @@
             {% include 'partials/header-bar.html.twig' %}
         </header>
         {% endblock %}
-
         <div class="padding highlightable">
             <a href="#" id="sidebar-toggle" data-sidebar-toggle><i class="fa fa-2x fa-bars"></i></a>
-
             {% block topbar %}{% if  github_link_position == 'top' or config.plugins.breadcrumbs.enabled %}
-
             <div id="top-bar">
                 {% if  github_link_position == 'top' %}
                 <div id="top-github-link">
                 {% include 'partials/github_link.html.twig' %}
                 </div>
                 {% endif %}
-
                 {% if config.plugins.breadcrumbs.enabled %}
                 {% include 'partials/breadcrumbs.html.twig' %}
                 {% endif %}
             </div>
-            {% endif %}{% endblock %}
-
-            {% block content %}{% endblock %}
-
-            {% block footer %}
-                {% if  github_link_position == 'bottom' %}
-                {% include 'partials/github_note.html.twig' %}
-                {% endif %}
+            {% endif %}
             {% endblock %}
-
+            {% block content %} 
+            {% endblock %}
         </div>
+        {% include 'partials/footer.html.twig' %}
+        {# {% block footer %}            
+              {% if  github_link_position == 'bottom' %}
+                {% include 'partials/github_note.html.twig' %}
+                {% endif %} 
+        {% endblock %} #}
     </section>
     {% endblock %}
-
     {% block analytics %}
         {% if theme_config.google_analytics_code %}
         {% include 'partials/analytics.html.twig' %}
         {% endif %}
     {% endblock %}
-
     {% block bottom %}
         {{ assets.js('bottom')|raw }}
     {% endblock %}

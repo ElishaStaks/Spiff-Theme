@@ -1,8 +1,10 @@
 
 <nav>
     <ul class="nav-links">
-        <a class="cta-button" href="https://calendly.com/spiffhelp"><button>BOOK A MEETING</button></a>
+        <a class="cta-button" href="https://calendly.com/spiffhelp"><button>Book a Meeting</button></a>
         <li><a href="https://spiff.com.au/">SPIFF</a></li>
     </ul>
-  {% include 'partials/tntsearch.html.twig' with { in_page: true }%}
-</nav>     
+</nav>
+<div class="search-bar-wrapper">
+{% include 'partials/tntsearch.html.twig' with { in_page: true }%}
+</div>
