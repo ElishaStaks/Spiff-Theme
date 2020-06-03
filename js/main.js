@@ -28,7 +28,7 @@ window.onload = () => {
         selectElement(".tntsearch-results").style.visibility = "visible";
 
         // checks if there are 0 inputs in the search bar
-        if (input.value === 0){
+        if (input.value.length === 0){
             selectElement("#overlay").style.visibility = "hidden";
         }
         else {
